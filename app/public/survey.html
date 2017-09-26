@@ -325,13 +325,9 @@
             console.log(`friend1: ${friend}`)
             // or you can make GET here and ge all data and evaluate
             //or make post here 
-            $.post("/api/friends", friend)
-           
-              .done(function (data) {
-                     
-                     
-                alert(`added ${friend.name} to friends`)
-    });
+            $.post("/api/friends", friend, function (data) {
+            alert(`added ${friend.name} to friends`)
+             });
             
          })
 

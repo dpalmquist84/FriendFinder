@@ -92,16 +92,28 @@
             console.log(friendsData);
             if (current.total === friendsData[j].total ){
                 bestFriend = friendsData[i]
-            } else if (current.total - 1 === friendsData[j].total || current.total - 1 === friendsData[j].total) {
+            } else if (current.total - 1 === friendsData[j].total || current.total + 1 === friendsData[j].total) {
                 bestFriend = friendsData[j]
-            } else if (current.total - 2 === friendsData[j].total || current.total - 2 === friendsData[j].total) {
+            } else if (current.total - 2 === friendsData[j].total || current.total + 2 === friendsData[j].total) {
                 bestFriend = friendsData[j]
-            } else if (current.total - 3 === friendsData[j].total || current.total - 3 === friendsData[j].total) {
+            } else if (current.total - 3 === friendsData[j].total || current.total + 3 === friendsData[j].total) {
                 bestFriend = friendsData[j]
-            } else if (current.total - 4 === friendsData[j].total || current.total - 4 === friendsData[j].total) {
+            } else if (current.total - 4 === friendsData[j].total || current.total + 4 === friendsData[j].total) {
                 bestFriend = friendsData[j]
-            } else if (current.total - 5 === friendsData[j].total || current.total - 5 === friendsData[j].total) {
+            } else if (current.total - 5 === friendsData[j].total || current.total + 5 === friendsData[j].total) {
                 bestFriend = friendsData[j]
+            } else if (current.total - 6 === friendsData[j].total || current.total + 6 === friendsData[j].total) {
+                bestFriend = friendsData[j]
+            } else if (current.total - 7 === friendsData[j].total || current.total + 7 === friendsData[j].total) {
+                bestFriend = friendsData[j]
+            } else if (current.total - 8 === friendsData[j].total || current.total + 8 === friendsData[j].total) {
+                bestFriend = friendsData[j]
+            } else if (current.total - 9 === friendsData[j].total || current.total + 9 === friendsData[j].total) {
+                bestFriend = friendsData[j]
+            }
+              else if (current.total - 10 === friendsData[j].total || current.total + 10 === friendsData[j].total) {
+                bestFriend = friendsData[j]
+            } 
             } 
 
           }
@@ -123,9 +135,9 @@
         } else {
             $("#tableWell-" + i + 1).append(`<h2>Best Friend not found 😦</h2>`)
         }
-    }
       });
-    }
+     }
+    
     runTableQuery();
 
 
