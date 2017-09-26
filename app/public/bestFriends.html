@@ -118,7 +118,7 @@
 
           }
           console.log(bestFriend);
-          console.log(current);
+          console.log(`current friend ${current.name}`);
           // Create the HTML Well (Section) and Add the table content for each reserved table
           var tableSection = $("<div>");
           tableSection.addClass("well");
@@ -129,9 +129,10 @@
 
 
           // Then display the remaining fields in the HTML (Section Name, Date, URL)
-          $("#tableWell-" + i + 1).append(`<h2><span class='label label-primary'> </span> | ${current.name} total: ${current.total}  <img src="${current.photo}"> </h2>`);
+          $("#tableWell-" + i + 1).append(`<h2><span class='label label-primary'>Your new best Friend </span> | ${current.name} | total: ${current.total} |
+              friendship differential ${current.total - bestFriend.total} <img src="${current.photo}"> </h2>`);
           if (bestFriend){
-          $("#tableWell-" + i + 1).append(`<h2><span class='label label-primary'>Your new best Friend </span> | ${bestFriend.name} total: ${bestFriend.total}  <img src="${bestFriend.photo}"> </h2>`);
+          $("#tableWell-" + i + 1).append(`<h2><span class='label label-primary'>BFFS FORVER...FOOORRREEEVVVVEERRRR </span> | ${bestFriend.name} total: ${bestFriend.total}  <img src="${bestFriend.photo}"> </h2>`);
         } else {
             $("#tableWell-" + i + 1).append(`<h2>Best Friend not found 😦</h2>`)
         }
