@@ -81,14 +81,19 @@
         console.log(friendsData);
         console.log("------------------------------------");
 
+        var current = friendsData.pop()
+        console.log(current)
+
         // Loop through and display each of the customers
         for (var i = 0; i < friendsData.length; i++) {
             
-          var current = friendsData.pop();
+          
           var bestFriend = [];
-          console.log(current);
+          
+        }
 
           for (var j = 0; j < friendsData.length; j++) {
+            console.log(`current ${current}`)
             console.log(friendsData);
             if (current.total === friendsData[j].total ){
                 bestFriend = friendsData[i]
@@ -116,7 +121,7 @@
             } 
             } 
 
-          }
+          
           console.log(bestFriend);
           console.log(`current friend ${current.name}`);
           // Create the HTML Well (Section) and Add the table content for each reserved table
@@ -129,7 +134,7 @@
 
 
           // Then display the remaining fields in the HTML (Section Name, Date, URL)
-          $("#tableWell-" + i + 1).append(`<h2><span class='label label-primary'>Your new best Friend </span> | ${current.name} | total: ${current.total} |
+          $("#tableWell-" + i + 1).append(`<h2><span class='label label-primary'>Are you ready!!! </span> | ${current.name} | total: ${current.total} |
               friendship differential ${current.total - bestFriend.total} <img src="${current.photo}"> </h2>`);
           if (bestFriend){
           $("#tableWell-" + i + 1).append(`<h2><span class='label label-primary'>BFFS FORVER...FOOORRREEEVVVVEERRRR </span> | ${bestFriend.name} total: ${bestFriend.total}  <img src="${bestFriend.photo}"> </h2>`);

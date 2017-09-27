@@ -12,17 +12,17 @@ module.exports = function(app){
   app.post("/api/friends", function(req, res) {
     console.log(`friends4 : ${req.body}`);
     console.log(req.body);
-    friends.push(req.body);
+    // friends.push(req.body);
     // Note the code here. Our "server" will respond to requests and let users know if they have a table or not.
     // It will do this by sending out the value "true" have a table
-  //   if (friends.length < 30) {
-  //     friends.push(req.body);
-  //     res.json(true);
-  //   }
-  //   else {
-  //     friends.push(req.body);
-  //     res.json(false);
-  //   }
+    if (friends.length < 30) {
+      friends.push(req.body);
+      res.json(true);
+    }
+    else {
+      friends.push(req.body);
+      res.json(false);
+    }
    });
 
   app.post("/api/clear", function() {
