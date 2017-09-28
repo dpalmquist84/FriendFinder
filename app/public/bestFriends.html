@@ -94,9 +94,10 @@
 
           for (var j = 0; j < friendsData.length; j++) {
             console.log(`current ${current}`)
-            console.log(friendsData);
+            console.log(friendsData[0])
+            console.log(friendsData[j].total);
             if (current.total === friendsData[j].total ){
-                bestFriend = friendsData[i]
+                bestFriend = friendsData[j]
             } else if (current.total - 1 === friendsData[j].total || current.total + 1 === friendsData[j].total) {
                 bestFriend = friendsData[j]
             } else if (current.total - 2 === friendsData[j].total || current.total + 2 === friendsData[j].total) {
